@@ -1,0 +1,24 @@
+create TABLE countries(
+    id_country serial PRIMARY key,
+    name varchar(50) NOT NULL
+
+);
+
+CREATE TABLE priorities(
+    id_priority serial PRIMARY key,
+    type_name varchar(50) NOT NULL
+);
+
+CREATE TABLE contact_request(
+    id_email varchar(100) NOT NULL,
+    id_country integer NOT NULL,
+    id_priority integer NOT NULL,
+    name varchar(20) NOT NULL,
+    detail varchar(50) NOT NULL,
+    physical_address varchar(100) NOT NULL
+    foreign key(id_country) references countries(id_country),
+    foreign key(id_priority) references priorities(id_priority)
+    
+    
+);
+

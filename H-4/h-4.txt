@@ -1,0 +1,26 @@
+insert into countries (name) values ('venezuela'),('brasil'),('peru'),('argentina'),('panama');
+select * from countries;
+
+insert into priorities (type_name) values ('bajo'),('medio'),('alto');
+select * from priorities;
+
+insert into contact_request(id_email,id_country,id_priority,name,detail,physical_address)
+values ('vene@gmail.com',1,1,'ven','latam','caracas'),
+       ('per@gmail.com',2,2,'per','occi','lima'),
+       ('bar@gmail.com',3,3,'bar','este','brasilia');
+select * from contact_request;
+
+delete from contact_request where (id_email) = 'bar@gmail.com';
+select * from contact_request;
+
+
+update contact_request set name = 'fooz' ,detail = 'latinoamerica' where id_email = 'vene@gmail.com' ;
+select * from contact_request;
+
+
+
+
+
+
+
+
